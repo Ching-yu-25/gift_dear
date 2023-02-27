@@ -1,0 +1,165 @@
+@import "common";
+
+.ig-style {
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  margin: 5% auto;
+  padding: 1rem;
+  box-shadow: 2px 2px 5px rgba(43, 128, 197, 0.5);
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(217, 217, 217);
+    background-image: url(/img/221211_96x74.png);
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  .name {
+    margin-left: .5rem;
+  }
+
+  .photo-name {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.photos {
+  div {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &.heart-show {
+    position: relative;
+  }
+
+  &.heart-show::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: url(/img/heart-07.png) no-repeat center center;
+    animation: heart_show .5s 1;
+  }
+}
+
+button,
+.more {
+  border: 1px solid transparent;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+  }
+
+  &.heart-show {
+    svg {
+      path {
+        fill: #e0226b;
+        stroke: #e0226b;
+      }
+    }
+  }
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+
+  .right {
+    text-align: right;
+  }
+
+  .left {
+    text-align: left;
+
+    button {
+      margin-right: .5rem;
+    }
+  }
+}
+
+.content {
+  .good {
+    margin-bottom: .5rem;
+  }
+
+  .text-inner {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+
+    &.show-more {
+      overflow: visible;
+    }
+  }
+
+  .read-more {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+
+.slick-prev {
+  left: 5px;
+  z-index: 9;
+}
+
+.slick-next {
+  right: 5px;
+  z-index: 9;
+}
+
+.slick-dots li:nth-child(1).slick-active button::before {
+  color: #faacc2;
+}
+
+.slick-dots li:nth-child(2).slick-active button::before {
+  color: #fefacd;
+}
+
+.slick-dots li:nth-child(3).slick-active button::before {
+  color: #75c3f1;
+}
+
+
+
+
+@keyframes heart_show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  40% {
+    opacity: 100%;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+}
