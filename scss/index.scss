@@ -44,7 +44,7 @@
     height: 40px;
     border-radius: 20px;
     background-color: rgb(217, 217, 217);
-    background-image: url(/img/221211_96x74.png);
+    background-image: url(../img/221211_96x74.png);
     background-size: cover;
     background-position: center bottom;
   }
@@ -80,7 +80,7 @@
     top: 0;
     left: 0;
     opacity: 0;
-    background: url(/img/heart-07.png) no-repeat center center;
+    background: url(../img/heart-07.png) no-repeat center center;
     animation: heart_show .5s 1;
   }
 }
