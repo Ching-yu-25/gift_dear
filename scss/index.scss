@@ -139,7 +139,7 @@ button,
     width: 80%;
 
     &.show-more {
-      overflow: visible;
+      overflow: initial;
       -webkit-box-orient: initial;
       width: 100%;
     }
