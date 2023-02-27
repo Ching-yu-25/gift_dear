@@ -213,9 +213,10 @@ button.heart-show svg path,
 }
 
 .content .text-inner.show-more {
-  overflow: initial;
+  overflow: initial !important;
   -webkit-box-orient: initial;
   width: 100%;
+  display: block;
 }
 
 .content .read-more {
