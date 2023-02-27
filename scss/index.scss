@@ -1,12 +1,37 @@
 @import "common";
 
+.cover {
+  background-color: #c2eff6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #psw {
+    padding: .25rem;
+    border: 1px solid lightgray;
+    border-radius: .2rem;
+    box-shadow: none;
+
+    &.wrong {
+      border: 2px solid #e0226b;
+    }
+  }
+}
+
 .ig-style {
   background-color: white;
   width: 90%;
   max-width: 400px;
-  margin: 5% auto;
+  margin: 1rem auto;
   padding: 1rem;
   box-shadow: 2px 2px 5px rgba(43, 128, 197, 0.5);
+
 }
 
 .top-row {
@@ -108,16 +133,35 @@ button,
   .text-inner {
     overflow: hidden;
     display: -webkit-box;
+    text-overflow: ellipsis;
     -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    width: 80%;
 
     &.show-more {
       overflow: visible;
+      -webkit-box-orient: initial;
+      width: 100%;
     }
   }
 
   .read-more {
     text-decoration: underline;
     cursor: pointer;
+  }
+}
+
+.fix-img {
+  position: fixed;
+  bottom: -10px;
+  left: 5%;
+  width: 20%;
+  max-width: 150px;
+  animation: swing 1.5s infinite alternate;
+  pointer-events: none;
+
+  img {
+    width: 100%;
   }
 }
 
@@ -161,5 +205,15 @@ button,
   100% {
     opacity: 0;
     transform: scale(.8);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
   }
 }

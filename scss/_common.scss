@@ -8,6 +8,9 @@ body {
   background-color: #c2eff6;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 h1,
@@ -27,4 +30,21 @@ ul {
 
 .row {
   margin: 1rem 0;
+}
+
+.btn {
+  background-color: #e0226b;
+  color: white;
+  border: 2px solid #e0226b;
+  padding: .25rem .5rem;
+  border-radius: .2rem;
+  cursor: pointer;
+  transition: .5s all;
+  line-height: 1;
+
+  &:hover {
+    background-color: transparent;
+    color: #e0226b;
+    transition: .5s all;
+  }
 }
